@@ -53,24 +53,14 @@ initial begin
         rw = 1'b0;
         devAddr = 7'b1000000;
         devInnerAddr = 8'd1;
-        sendData = 8'b10111010;
-    
-    #10000
-        rw = 1'b1;
-        devAddr = 7'b1000000;
-        devInnerAddr = 8'd1;
-
-    #10000
-        rw = 1'b0;
-        devAddr = 7'b1000000;
-        devInnerAddr = 8'd10;
-        sendData = 8'b000011101;
-    
-    #10000
-        rw = 1'b1;
-        devAddr = 7'b1000000;
-        devInnerAddr = 8'd10;
- 
+        sendData = 8'b10111010; 
 end
+
+// initial begin
+//     #10
+//         rw = 1'b1;
+//         devAddr = 7'b1000000;
+//         devInnerAddr = 8'b00000001;
+// end
 
 endmodule

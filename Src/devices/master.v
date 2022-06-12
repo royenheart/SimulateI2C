@@ -49,15 +49,16 @@ module master(clk,
     wire scl;
     wire sda;
     
-    i2cSend u_i2cSend(
+    i2c u_i2c(
     .clk            (clk),
     .rst            (rst),
-    .sendEnable             (1'b1),
+    .sendEnable     (!rw),
+    .RecvEna        (rw),
     
     .devAddr        (devAddr),
     .devInnerAddr   (devInnerAddr),
     .sendData       (sendData),
-    // .readData       (readData),
+    .readData       (readData),
     .done           (done),
     
     .scl            (scl),
