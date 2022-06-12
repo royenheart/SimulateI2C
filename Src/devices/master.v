@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company:
-// Engineer: 王若譞
+// Engineer: Ruoxuan Wang
 //
 // Create Date: 2022/06/12 10:36:05
 // Design Name:
@@ -10,7 +10,7 @@
 // Target Devices:
 // Tool Versions:
 // Description:
-//
+// 上位机模块
 // Dependencies:
 //
 // Revision:

@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company:
-// Engineer: 王若譞
+// Engineer: Ruoxuan Wang
 //
 // Create Date: 2022/06/12 10:36:05
 // Design Name:
@@ -107,7 +107,7 @@ module i2cRecv(clk,
         else if (RecvEna)
         begin
             case(state)
-                `idle:                   //空闲状态，初始化
+                `ridle:                   //空闲状态，初始化
                 begin
                     sclEna      <= 1'b0;
                     state       <= 4'd1;
@@ -119,19 +119,19 @@ module i2cRecv(clk,
                     Jumpstate   <= 4'd0;
                     ReadDataReg <= 8'b0;
                 end
-                `loadDeviceAddrFirst :                   //加载I2C设备物理地址
+                `rloadDeviceAddrFirst:                   //加载I2C设备物理地址
                 begin
                     state     <= 4'd3;
                     Jumpstate <= 4'd4;
                     LoadData  <= {DeviceAddr, 1'b0};
                 end
-                `loadRegisterAddr:                   //加载I2C数据地址
+                `rloadRegisterAddr:                   //加载I2C数据地址
                 begin
                     state     <= 4'd4;
                     Jumpstate <= 4'd7;
                     LoadData  <= RegisterAddr;
                 end
-                `sendStartFirst:                   //发送第一个起始信号
+                `rsendStartFirst:                   //发送第一个起始信号
                 begin
                     sclEna  <= 1'b1;
                     sdaMode <= 1'b1;
@@ -141,7 +141,7 @@ module i2cRecv(clk,
                         state  <= 4'd4;
                     end
                 end
-                `sendByte:                   //发送
+                `rsendByte:                   //发送
                 begin
                     sclEna  <= 1'b1;
                     sdaMode <= 1'b1;
@@ -159,7 +159,7 @@ module i2cRecv(clk,
                         end
                     end
                 end
-                `recvAck:                   //接受应答
+                `rrecvAck:                   //接受应答
                 begin
                     sclEna  <= 1'b1;
                     sdaReg  <= 1'b0;
@@ -170,7 +170,7 @@ module i2cRecv(clk,
                         state <= 4'd6;
                     end
                 end
-                `checkAck:                   //检验应答
+                `rcheckAck:                   //检验应答
                 begin
                     sclEna <= 1'b1;
                     if (ack == 1'b0)
@@ -183,7 +183,7 @@ module i2cRecv(clk,
                         end
                     end
                 end
-                `sendStartSecond:                   //发送第二次起始信号
+                `rsendStartSecond:                   //发送第二次起始信号
                 begin
                     sclEna  <= 1'b1;
                     sdaMode <= 1'b1;
@@ -193,13 +193,13 @@ module i2cRecv(clk,
                         state  <= 4'd8;
                     end
                 end
-                `loadDeviceAddrSecond :                   //第二次加载I2C物理地址
+                `rloadDeviceAddrSecond :                   //第二次加载I2C物理地址
                 begin
                     state     <= 4'd4;
                     Jumpstate <= 4'd9;
                     LoadData  <= {DeviceAddr, 1'b1};
                 end
-                `readData :                   //读数据
+                `rreadData :                   //读数据
                 begin
                     sclEna  <= 1'b1;
                     sdaMode <= 1'b0;
@@ -218,7 +218,7 @@ module i2cRecv(clk,
                         end
                     end
                 end
-                `recvNotAck :                  //主机发送非应答信号1给从机
+                `rrecvNotAck :                  //主机发送非应答信号1给从机
                 begin
                     sclEna  <= 1'b1;
                     sdaMode <= 1'b1;
@@ -228,7 +228,7 @@ module i2cRecv(clk,
                         sdaReg <= 1'b1;
                     end
                 end
-                `clearSDA :                  //从机收到非应答信号1后，初始化sda为0
+                `rclearSDA :                  //从机收到非应答信号1后，初始化sda为0
                 begin
                     sclEna  <= 1'b1;
                     sdaMode <= 1'b1;
@@ -238,7 +238,7 @@ module i2cRecv(clk,
                         sdaReg <= 1'b0;
                     end
                 end
-                `sendStop :                  //发送停止信号
+                `rsendStop :                  //发送停止信号
                 begin
                     sclEna  <= 1'b1;
                     sdaMode <= 1'b1;
@@ -248,7 +248,7 @@ module i2cRecv(clk,
                         state  <= 4'd13;
                     end
                 end
-                `over :                  //结束
+                `rover :                  //结束
                 begin
                     sclEna       <= 1'b0;
                     sdaMode      <= 1'b1;

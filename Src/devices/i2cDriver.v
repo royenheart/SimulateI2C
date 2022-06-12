@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company:
-// Engineer: 谢皓泽、王若譞
+// Engineer: RoyenHeart、Ruoxuan Wang
 //
 // Create Date: 2022/06/12 10:36:05
 // Design Name:
@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-
+// @deprecated
 module i2cDriver (clk,
                   rst,
                   rw,

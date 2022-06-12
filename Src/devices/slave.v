@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 谢皓泽
+// Engineer: RoyenHeart
 // 
 // Create Date: 2022/06/12 10:36:05
 // Design Name: 
@@ -10,7 +10,7 @@
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 
+// 下位机模块
 // Dependencies: 
 // 
 // Revision:

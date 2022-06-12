@@ -1,16 +1,16 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 谢皓泽
+// Engineer: RoyenHeart、Ruoxuan Wang
 // 
 // Create Date: 2022/06/12 10:36:05
 // Design Name: 
-// Module Name: I2CSend
+// Module Name: i2c
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 
+// I2C接口模块
 // Dependencies: 
 // 
 // Revision:

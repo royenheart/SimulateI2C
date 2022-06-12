@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="i2c_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="i2c_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="11.301970 us"></ZoomEndTime>
+      <Cursor1Time time="15.000000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="340"></NameColumnWidth>
+      <ValueColumnWidth column_width="155"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="42" />
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/sendEnable" type="logic">
+      <obj_property name="ElementShortName">sendEnable</obj_property>
+      <obj_property name="ObjectShortName">sendEnable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/RecvEna" type="logic">
+      <obj_property name="ElementShortName">RecvEna</obj_property>
+      <obj_property name="ObjectShortName">RecvEna</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/devAddr" type="array">
+      <obj_property name="ElementShortName">devAddr[6:0]</obj_property>
+      <obj_property name="ObjectShortName">devAddr[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/devInnerAddr" type="array">
+      <obj_property name="ElementShortName">devInnerAddr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">devInnerAddr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/sendData" type="array">
+      <obj_property name="ElementShortName">sendData[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sendData[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/readData" type="array">
+      <obj_property name="ElementShortName">readData[7:0]</obj_property>
+      <obj_property name="ObjectShortName">readData[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/scl" type="logic">
+      <obj_property name="ElementShortName">scl</obj_property>
+      <obj_property name="ObjectShortName">scl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/sda" type="logic">
+      <obj_property name="ElementShortName">sda</obj_property>
+      <obj_property name="ObjectShortName">sda</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/countScl" type="array">
+      <obj_property name="ElementShortName">countScl[9:0]</obj_property>
+      <obj_property name="ObjectShortName">countScl[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/sclEnable" type="logic">
+      <obj_property name="ElementShortName">sclEnable</obj_property>
+      <obj_property name="ObjectShortName">sclEnable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/jmpState" type="array">
+      <obj_property name="ElementShortName">jmpState[3:0]</obj_property>
+      <obj_property name="ObjectShortName">jmpState[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/sdaMode" type="logic">
+      <obj_property name="ElementShortName">sdaMode</obj_property>
+      <obj_property name="ObjectShortName">sdaMode</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/sdaBuffer" type="logic">
+      <obj_property name="ElementShortName">sdaBuffer</obj_property>
+      <obj_property name="ObjectShortName">sdaBuffer</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/ReadDataReg" type="array">
+      <obj_property name="ElementShortName">ReadDataReg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ReadDataReg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/dataBuffer" type="array">
+      <obj_property name="ElementShortName">dataBuffer[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dataBuffer[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/hasSendDataBits" type="array">
+      <obj_property name="ElementShortName">hasSendDataBits[3:0]</obj_property>
+      <obj_property name="ObjectShortName">hasSendDataBits[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/ack" type="logic">
+      <obj_property name="ElementShortName">ack</obj_property>
+      <obj_property name="ObjectShortName">ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/sclInLow" type="logic">
+      <obj_property name="ElementShortName">sclInLow</obj_property>
+      <obj_property name="ObjectShortName">sclInLow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/sclInHigh" type="logic">
+      <obj_property name="ElementShortName">sclInHigh</obj_property>
+      <obj_property name="ObjectShortName">sclInHigh</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/sclInNegEdge" type="logic">
+      <obj_property name="ElementShortName">sclInNegEdge</obj_property>
+      <obj_property name="ObjectShortName">sclInNegEdge</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/sclDiffMiddle" type="array">
+      <obj_property name="ElementShortName">sclDiffMiddle[9:0]</obj_property>
+      <obj_property name="ObjectShortName">sclDiffMiddle[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/sclDiff0" type="array">
+      <obj_property name="ElementShortName">sclDiff0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sclDiff0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/sclDiff1" type="array">
+      <obj_property name="ElementShortName">sclDiff1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sclDiff1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/sclDiff2" type="array">
+      <obj_property name="ElementShortName">sclDiff2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sclDiff2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_i2c/sclDiff3" type="array">
+      <obj_property name="ElementShortName">sclDiff3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sclDiff3[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_slaver/scl" type="logic">
+      <obj_property name="ElementShortName">scl</obj_property>
+      <obj_property name="ObjectShortName">scl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_slaver/sda" type="logic">
+      <obj_property name="ElementShortName">sda</obj_property>
+      <obj_property name="ObjectShortName">sda</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_slaver/sdaMode" type="logic">
+      <obj_property name="ElementShortName">sdaMode</obj_property>
+      <obj_property name="ObjectShortName">sdaMode</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_slaver/memory" type="array">
+      <obj_property name="ElementShortName">memory[255:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">memory[255:0][7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_slaver/address" type="array">
+      <obj_property name="ElementShortName">address[7:0]</obj_property>
+      <obj_property name="ObjectShortName">address[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_slaver/writeBuffer" type="array">
+      <obj_property name="ElementShortName">writeBuffer[7:0]</obj_property>
+      <obj_property name="ObjectShortName">writeBuffer[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_slaver/sdaBuffer" type="array">
+      <obj_property name="ElementShortName">sdaBuffer[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sdaBuffer[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_slaver/shift" type="array">
+      <obj_property name="ElementShortName">shift[7:0]</obj_property>
+      <obj_property name="ObjectShortName">shift[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_slaver/devInnerAddr" type="array">
+      <obj_property name="ElementShortName">devInnerAddr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">devInnerAddr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_slaver/devAddr" type="array">
+      <obj_property name="ElementShortName">devAddr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">devAddr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_slaver/state" type="array">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_slaver/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2c_test/u_master/u_slaver/myDevId" type="array">
+      <obj_property name="ElementShortName">myDevId[6:0]</obj_property>
+      <obj_property name="ObjectShortName">myDevId[6:0]</obj_property>
+   </wvobject>
+</wave_config>

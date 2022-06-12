@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 王若譞、谢皓泽
+// Engineer: Ruoxuan Wang、RoyenHeart
 // 
 // Create Date: 2022/06/12 10:36:05
 // Design Name: 
@@ -48,19 +48,19 @@ initial begin
     forever #5 clk = ~clk;
 end
 
-initial begin
-    #10
-        rw = 1'b0;
-        devAddr = 7'b1000000;
-        devInnerAddr = 8'd1;
-        sendData = 8'b10111010; 
-end
-
 // initial begin
 //     #10
-//         rw = 1'b1;
+//         rw = 1'b0;
 //         devAddr = 7'b1000000;
-//         devInnerAddr = 8'b00000001;
+//         devInnerAddr = 8'd1;
+//         sendData = 8'b10111010; 
 // end
+
+initial begin
+    #10
+        rw = 1'b1;
+        devAddr = 7'b1000000;
+        devInnerAddr = 8'b00000001;
+end
 
 endmodule
