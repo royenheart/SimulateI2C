@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: 谢皓泽
 // 
 // Create Date: 2022/06/12 10:36:05
-// Design Name: 谢皓泽
+// Design Name: 
 // Module Name: I2CSend
 // Project Name: 
 // Target Devices: 
@@ -23,36 +23,36 @@
 
 // 主机向从机写数据
 module i2cSend (
-    input clk,
-    input rst,
-    input sendEnable,
+    clk,
+    rst,
+    sendEnable,
 
-    input devAddr,
-    input devInnerAddr,
-    input sendData,
+    devAddr,
+    devInnerAddr,
+    sendData,
 
-    output done,
+    done,
     
-    output scl,
-    inout sda);
+    scl,
+    sda);
     
 //------规定输入输出类型
-wire clk;
-wire rst;
-wire sendEnable;
-wire [6:0] devAddr;
-wire [7:0] devInnerAddr;
-wire [7:0] sendData;
-reg done;
-wire scl;
-wire sda;
+input wire clk;
+input wire rst;
+input wire sendEnable;
+input wire [6:0] devAddr;
+input wire [7:0] devInnerAddr;
+input wire [7:0] sendData;
+output reg done;
+output wire scl;
+inout wire sda;
 //------规定输入输出类型
 
 //------模块内变量定义
 reg [9:0] countScl; // SCL时钟线计数器
 reg       sclEnable; // SCL时钟线使能信号
 reg [3:0] state; // 发送模块状态
-reg       jmpState; // 跳转时需要跳转的状态
+reg [3:0] jmpState; // 跳转时需要跳转的状态
 reg       sdaMode; // sda模式，1输出，0输入
 reg       sdaBuffer; // sda缓冲
 reg [7:0] dataBuffer; // 完整8Bits数据缓冲
@@ -65,7 +65,7 @@ wire      sclInNegEdge; // scl处于下降沿
 //------模块内变量定义
 
 //------scl信号标志位产生
-parameter sclDiffMiddle = 10'd500;
+parameter sclDiffMiddle = 10'd24;
 parameter sclDiff0 = (sclDiffMiddle >> 2) - 1;
 parameter sclDiff1 = (sclDiffMiddle >> 1) - 1;
 parameter sclDiff2 = (sclDiff0 + sclDiff1) + 1;
@@ -82,6 +82,9 @@ always @(posedge clk or negedge rst) begin
         else begin
             countScl <= countScl + 1'b1;
         end
+    end
+    else begin
+        countScl <= 10'd0;
     end
 end
 
@@ -203,10 +206,11 @@ task rstParams; begin
     jmpState <= `idle;
     sdaMode <= 1'b1;
     sdaBuffer <= 1'b1;
-    hasSendDataBits <= 1'b0;
+    hasSendDataBits <= 4'd0;
     done <= 1'b0;
     ack <= 1'b0;
 end
+endtask
 
 task idleParams; begin
     state <= `loadDevAddr;
@@ -214,9 +218,10 @@ task idleParams; begin
     sdaMode <= 1'b1;
     sdaBuffer <= 1'b1;
     sclEnable <= 1'b0;
-    hasSendDataBits <= 1'b0;
+    hasSendDataBits <= 4'd0;
     done <= 1'b0;
 end
+endtask
 
 task overParams; begin
     state <= `idle;
@@ -226,6 +231,7 @@ task overParams; begin
     done <= 1'b1;
     ack <= 1'b0;
 end
+endtask
 //------状态机实现i2cSend
 
 endmodule
